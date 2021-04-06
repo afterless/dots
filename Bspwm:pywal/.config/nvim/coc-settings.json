@@ -1,0 +1,29 @@
+{
+ // make vim select first item on completion
+"suggest.noselect": false,
+"python.pythonPath": "python3",
+"java.home": "/usr/lib/jvm/java-15-openjdk",
+"java.project.referencedLibraries": [
+    "/home/afterless/Downloads/sinbad.jar"
+],
+"java.import.gradle.enabled": true,
+"java.configuration.runtimes": [
+  {
+    "name": "JavaSE-14",
+    "path": "/usr/lib/jvm/java-14-j9",
+  },
+  {
+    "name": "JavaSE-15",
+    "path": "/usr/lib/jvm/java-15-openjdk",
+    "default": true
+  }
+],
+"languageserver": {
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
+      "filetypes": ["haskell", "lhaskell"]
+    }
+  }
+}

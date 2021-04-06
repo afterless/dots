@@ -1,0 +1,11 @@
+#!/bin/bash
+
+dq(){ bspc query -D -d "$1"; }
+getclass() { xprop -id "$1" WM_CLASS | sed -e 's/.*=.*, "\([^"]*\)".*/\1/'; }
+id=$1 class=$2 instance=$3
+eval $4
+
+if [ -n "$desktop" ] &&
+    [ "$(dq "$desktop")" != "$(dq)" ] &&
+    [ "$class" = "$(getclass "$(bspc query -N -n)")" ] &&
+    echo node=focused
