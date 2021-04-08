@@ -17,7 +17,7 @@ spicetify &
 
 setxkbmap -model pc105 -layout us &
 sxhkd &
-# wal -R -o wal-set &
+wal -R -o wal-set &
 xsetroot -cursor_name left_ptr &
 
 # Workspaces
